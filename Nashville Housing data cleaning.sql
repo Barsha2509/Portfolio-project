@@ -1,9 +1,14 @@
 SELECT * FROM "Nashville Housing";
 
-SELECT "SaleDate" FROM "Nashville Housing";
+SELECT TO_DATE("SaleDate",'Month DD, YYYY') FROM "Nashville Housing";
 
-UPDATE "Nashville Housing"
-SET "SaleDate"=TO_CHAR("SaleDate"::DATE,'yyyy/mm/dd');
+--UPDATE "Nashville Housing"
+--SET "SaleDate"=TO_DATE("SaleDate",'Month DD, YYYY');
+
+
+ALTER  TABLE "Nashville Housing"
+ALTER COLUMN "SaleDate"
+TYPE date USING TO_DATE("SaleDate",'Month DD, YYYY');
 
 --Filling up all the null values for the address column by using
 --the value from the properties with same ParcelID
