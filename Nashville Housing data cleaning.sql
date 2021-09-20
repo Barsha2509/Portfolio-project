@@ -79,10 +79,10 @@ SET "SoldAsVacant" = CASE
 WITH CTE_ROW AS(
 	SELECT *,
 	ROW_NUMBER() OVER(PARTITION BY "ParcelID",
-									"PropertyAddress",
-									"SaleDate",
-									"SalePrice",
-									"LegalReference"
+								"PropertyAddress",
+								"SaleDate",
+								"SalePrice",
+								"LegalReference"
 				 ORDER BY "UniqueID ")
 	FROM "Nashville Housing"
 				) 
