@@ -79,8 +79,8 @@ SET "SoldAsVacant" = CASE
 						 THEN 'No'
 						 ELSE "SoldAsVacant"	 
 					 END;
-					 
-
+					
+--Removing duplicate values
 WITH CTE_ROW AS(
 	SELECT *,
 	ROW_NUMBER() OVER(
