@@ -1,3 +1,6 @@
+------The aim of this project is to analyze the COVID-19 dataset and to later visualize it in Tableau. 
+------The link to the visualization here https://public.tableau.com/app/profile/bt4661/viz/COVID19dashboard_16268484332440/Dashboard1
+
 SELECT * 
 FROM covideaths
 WHERE continent IS NOT NULL 
