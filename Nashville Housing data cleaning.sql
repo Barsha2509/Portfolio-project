@@ -1,3 +1,4 @@
+----The aim of this project was to clean and analyze the Nashville housing dataset
 SELECT * FROM "Nashville Housing";
 
 SELECT TO_DATE("SaleDate",'Month DD, YYYY') FROM "Nashville Housing";
